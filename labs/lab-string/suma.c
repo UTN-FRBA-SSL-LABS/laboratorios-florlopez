@@ -13,6 +13,9 @@
 
 int main(int argc, char *argv[]) {
     (void)argc; (void)argv;
-    /* TODO */
+    int total = 0;                                     /* acumulador */
+    for (char **arg = argv + 1; *arg != NULL; arg++)   /* recorre cada argumento */
+        total += ToInteger(*arg);                      /* convierte a entero y suma */
+    printf("%d\n", total);
     return 0;
 }

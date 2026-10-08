@@ -13,6 +13,10 @@
 
 int main(int argc, char *argv[]) {
     (void)argc; (void)argv;
-    /* TODO */
+      int iguales = 1;                                   /* arranca suponiendo que si */
+    for (char **arg = argv + 1; *arg != NULL; arg++)   /* recorre cada argumento */
+        if (!AreEqual(*arg, argv[1]))                  /* ¿es distinto al primero? */
+            iguales = 0;                               /* entonces no son todos iguales */
+    printf("%d\n", iguales);
     return 0;
 }

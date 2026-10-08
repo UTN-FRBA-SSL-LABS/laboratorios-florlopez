@@ -19,5 +19,5 @@ int main(void) {
 
     /* ── Operacion libre — agregar tests aca ────────────────────────────── */
 
-    return 0;
+        return 0;
 }
